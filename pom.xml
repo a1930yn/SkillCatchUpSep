@@ -55,6 +55,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>jp.ac.aiit.pbl</groupId>
+            <artifactId>qzqsm-sdk</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/qzqsm-sdk-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
