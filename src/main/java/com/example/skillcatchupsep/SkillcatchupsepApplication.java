@@ -1,5 +1,6 @@
 package com.example.skillcatchupsep;
 
+import jp.ac.aiit.pbl.disaster.prefix.Prefix;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
