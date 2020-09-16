@@ -31,8 +31,8 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: springboothelloworld
-        path: target/springboothelloworld-0.0.1-SNAPSHOT.jar
+        name: skillcatchupsep
+        path: target/skillcatchupsep-0.0.1-SNAPSHOT.jar
 
 #  deploy:
     - name: make keyfile
@@ -54,7 +54,7 @@ jobs:
       env:
         EC2_USER: ${{ secrets.EC2_USER }}
         EC2_HOST: ${{ secrets.EC2_HOST }}
-      run: scp -o 'StrictHostKeyChecking no' -i keyfile target/springboothelloworld-0.0.1-SNAPSHOT.jar "$EC2_USER"@"$EC2_HOST":~/app
+      run: scp -o 'StrictHostKeyChecking no' -i keyfile target/skillcatchupsep-0.0.1-SNAPSHOT.jar "$EC2_USER"@"$EC2_HOST":~/app
       timeout-minutes: 1
 
     - name: sleep 31
