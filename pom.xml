@@ -63,11 +63,11 @@
             <scope>system</scope>
             <systemPath>${basedir}/qzqsm-sdk-1.0-SNAPSHOT.jar</systemPath>
         </dependency>
-        <!-- JDBC -->
+        <!-- JDBC >
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
+        </dependency-->
 
         <!-- PostgreSQL -->
         <dependency>
@@ -75,7 +75,7 @@
             <artifactId>postgresql</artifactId>
             <version>9.4.1207</version>
         </dependency>
-        <!-- Spring Data JPA -->
+        <!-- Spring Data JPA-->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
