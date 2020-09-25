@@ -1,5 +1,6 @@
 package com.example.skillcatchupsep.api.service;
 
+import com.example.skillcatchupsep.api.PrefixEntity;
 import com.example.skillcatchupsep.api.repository.PrefixRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

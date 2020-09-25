@@ -1,17 +1,18 @@
-package com.example.skillcatchupsep;
+package com.example.skillcatchupsep.api;
 
 import jp.ac.aiit.pbl.disaster.prefix.Prefix;
 import org.seasar.doma.*;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "Prefix")
-public class PrefixEntity {
-    
+@Table(name = "prefix")
+public class PrefixEntity implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long prefixId;
+    private Integer prefixId;
     
     private String preamble;
     
@@ -36,11 +37,11 @@ public class PrefixEntity {
         this.spare1 = prefix.getSpare1().substring(0,8);
     }
     
-    public Long getPrefixId() {
+    public Integer getPrefixId() {
         return prefixId;
     }
     
-    public void setPrefixId(Long prefixId) {
+    public void setPrefixId(Integer prefixId) {
         this.prefixId = prefixId;
     }
     

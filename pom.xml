@@ -63,11 +63,6 @@
             <scope>system</scope>
             <systemPath>${basedir}/qzqsm-sdk-1.0-SNAPSHOT.jar</systemPath>
         </dependency>
-        <!-- JDBC >
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency-->
 
         <!-- PostgreSQL -->
         <dependency>
@@ -75,13 +70,23 @@
             <artifactId>postgresql</artifactId>
             <version>9.4.1207</version>
         </dependency>
-        <!-- Spring Data JPA-->
+        <!-- JDBC -->
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>1.8.1.RELEASE</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
+        <!-- Spring Data JPA-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.data</groupId>-->
+<!--            <artifactId>spring-data-jpa</artifactId>-->
+<!--            <version>1.8.1.RELEASE</version>-->
+<!--        </dependency>-->
         <!-- ORM -->
+        <dependency>
+          <groupId>org.seasar.doma.boot</groupId>
+            <artifactId>doma-spring-boot-starter</artifactId>
+            <version>1.2.1</version>
+        </dependency>
         <dependency>
             <groupId>org.seasar.doma.boot</groupId>
             <artifactId>doma-spring-boot-core</artifactId>
