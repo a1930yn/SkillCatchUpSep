@@ -1,0 +1,1 @@
+SELECT * FROM Prefix WHERE prefixId = /* prefixId */1
