@@ -2,28 +2,36 @@ package com.example.skillcatchupsep.api;
 
 import jp.ac.aiit.pbl.disaster.prefix.Prefix;
 import org.seasar.doma.*;
+import org.seasar.doma.jdbc.entity.NamingType;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Entity
+@Entity(naming = NamingType.LOWER_CASE)
 @Table(name = "prefix")
 public class PrefixEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="prefixid")
     private Integer prefixId;
     
+    @Column(name="preamble")
     private String preamble;
     
+    @Column(name="messagetype")
     private String messageType;
     
+    @Column(name="disastercategory")
     private String disasterCategory;
     
+    @Column(name="reporttime")
     private LocalDateTime reportTime;
     
+    @Column(name="informationtype")
     private String informationType;
     
+    @Column(name="spare1")
     private String spare1;
     
     public PrefixEntity(){}
