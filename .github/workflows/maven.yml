@@ -23,10 +23,6 @@ jobs:
 #    - name: Test with Maven
 #      run: mvn -B test --file pom.xml
     - name: Build with Maven
-        env:
-        SPRING_DATASOURCE_URL: 1
-        SPRING_DATASOURCE_USERNAME: 2
-        SPRING_DATASOURCE_PASSWORD: 3
         
       run: mvn -B package --file pom.xml
     - name: Maven Wrapper chmod
