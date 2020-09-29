@@ -41,15 +41,15 @@ jobs:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: echo "$SECRET_KEY" > keyfile && chmod 600 keyfile
 
- #   - name: stop at EC2
-  #    env:
-  #      EC2_USER: ${{ secrets.EC2_USER }}
-  #      EC2_HOST: ${{ secrets.EC2_HOST }}
-  #    run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./stop.bash"
-  #    timeout-minutes: 1
+    - name: stop at EC2
+      env:
+        EC2_USER: ${{ secrets.EC2_USER }}
+        EC2_HOST: ${{ secrets.EC2_HOST }}
+      run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./stop.bash"
+      timeout-minutes: 1
 
-  #  - name: sleep 29
-  #    run: sleep 29
+    - name: sleep 4
+      run: sleep 4
 
     - name: scp artifact to EC2
       env:
@@ -58,12 +58,12 @@ jobs:
       run: scp -o 'StrictHostKeyChecking no' -i keyfile target/skillcatchupsep-0.0.1-SNAPSHOT.jar "$EC2_USER"@"$EC2_HOST":~/app
       timeout-minutes: 1
 
-  #  - name: sleep 31
- #     run: sleep 31
+    - name: sleep 6
+      run: sleep 6
 
-  #  - name: start at EC2
-   #   env:
-  #      EC2_USER: ${{ secrets.EC2_USER }}
-  #      EC2_HOST: ${{ secrets.EC2_HOST }}
-  #    run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./start.bash"
-  #    timeout-minutes: 1
+    - name: start at EC2
+      env:
+        EC2_USER: ${{ secrets.EC2_USER }}
+        EC2_HOST: ${{ secrets.EC2_HOST }}
+      run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./start.bash"
+      timeout-minutes: 1
