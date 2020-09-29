@@ -45,7 +45,7 @@ jobs:
       env:
         EC2_USER: ${{ secrets.EC2_USER }}
         EC2_HOST: ${{ secrets.EC2_HOST }}
-      run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./stop.bash"
+      run: ssh -o 'StrictHostKeyChecking no' -i keyfile ${EC2_USER}@${EC2_HOST} "./stop.bash"
       timeout-minutes: 1
 
     - name: sleep 4
@@ -65,5 +65,5 @@ jobs:
       env:
         EC2_USER: ${{ secrets.EC2_USER }}
         EC2_HOST: ${{ secrets.EC2_HOST }}
-      run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./start.bash"
+      run: ssh -o 'StrictHostKeyChecking no' -i keyfile ${EC2_USER}@${EC2_HOST} "./start.bash"
       timeout-minutes: 1
