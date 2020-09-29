@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QZQSM List of the last 30 disasters</title>
+    <link rel="stylesheet" href="style.css" th:href="@{style.css}">
+</head>
+<body>
+<div class="inner">
+    <table border="1">
+        <tr>
+            <td valign="middle" align="center">
+                <table border="1" valign="middle" align="center">
+                    <caption><h1>「みちびき」災害通報リスト 最新30件</h1></caption>
+                    <tr>
+                        <th>prefixId</th>
+                        <th>disasterCategory</th>
+                        <th>informationType</th>
+                        <th>messageType</th>
+                        <th>preamble</th>
+                        <th>spare1</th>
+                        <th>reportTime</th>
+                    </tr>
+                    <tr th:each="prefix:${prefix}">
+                        <td th:text="${prefix.prefixId}">prefixId</td>
+                        <td th:text="${prefix.disasterCategory}">disasterCategory</td>
+                        <td th:text="${prefix.informationType}">informationType</td>
+                        <td th:text="${prefix.messageType}">messageType</td>
+                        <td th:text="${prefix.preamble}">preamble</td>
+                        <td th:text="${prefix.spare1}">spare1</td>
+                        <td th:text="${prefix.reportTime}">reportTime</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
