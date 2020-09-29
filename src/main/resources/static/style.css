@@ -1,0 +1,28 @@
+@charset "utf-8";
+#orange    	{ background: #f26d42; /* orange */}
+#qzqsmblue	{ background: #2B4197; /* blue */ }
+#qzqsmgreen	{ background: #0BAA68; /* green */ }
+
+.inner{
+    font-family: "メイリオ","Comic Sans MS",Helvetica, san-serif;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform : translateY(-50%);
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.error {
+    color: red;
+}
+
+table, th, td {
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Comic Sans MS";
+    margin: 10px auto;
+    border: solid 1px;
+}
