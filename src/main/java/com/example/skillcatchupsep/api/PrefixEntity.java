@@ -41,7 +41,7 @@ public class PrefixEntity implements Serializable {
         this.messageType = prefix.getMessageType().getMessageTypeString();
         this.disasterCategory = prefix.getDisasterCategory().name();
         this.reportTime = prefix.getReportTime();
-        this.informationType = prefix.getInformationType().name();
+        this.informationType = prefix.getInformationType().getInformationType();
         this.spare1 = prefix.getSpare1().substring(0,8);
     }
     
