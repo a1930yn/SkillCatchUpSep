@@ -5,7 +5,6 @@ import org.seasar.doma.*;
 import org.seasar.doma.jdbc.entity.NamingType;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 @Entity(naming = NamingType.LOWER_CASE)
 @Table(name = "sse")

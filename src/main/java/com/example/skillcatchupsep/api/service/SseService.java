@@ -1,7 +1,5 @@
 package com.example.skillcatchupsep.api.service;
-import com.example.skillcatchupsep.api.PrefixEntity;
 import com.example.skillcatchupsep.api.SseEntity;
-import com.example.skillcatchupsep.api.repository.PrefixRepository;
 import com.example.skillcatchupsep.api.repository.SseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,8 +17,8 @@ import java.util.List;
             return sseRepository.findAll();
         }
 
-        public List<SseEntity> deleteAll(){
-            return sseRepository.deleteAll();
+        public void deleteAll(){
+            sseRepository.deleteAll();
         }
 
         public void create(SseEntity sseEntity){
