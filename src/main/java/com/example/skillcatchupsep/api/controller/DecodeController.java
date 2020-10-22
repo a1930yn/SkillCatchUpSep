@@ -17,10 +17,12 @@ public class DecodeController {
     
     @Autowired
     PrefixService prefixService;
+    @Autowired
     SseService sseService;
     
     @Autowired
     PrefixRepository prefixRepository;
+    @Autowired
     SseRepository sseRepository;
 
     @GetMapping("/disaster")
@@ -40,9 +42,7 @@ public class DecodeController {
         QZQSMDecoder qzqsmDecoder = new QZQSMDecoder();
         Disaster disaster = qzqsmDecoder.decode(qzqsm);
         System.out.println(disaster.getDisasterPrefix().toString());
-        //sseRepository.create(new SseEntity(disaster.getDisasterPrefix(),qzqsm));
-        SseEntity sseentity = new SseEntity(disaster.getDisasterPrefix(),qzqsm);
-        sseRepository.create(sseentity);
+        sseRepository.create(new SseEntity(disaster.getDisasterPrefix(),qzqsm));
     }
 }
 

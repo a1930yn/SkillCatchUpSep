@@ -1,6 +1,5 @@
 package com.example.skillcatchupsep.api.repository;
 
-import com.example.skillcatchupsep.api.PrefixEntity;
 import com.example.skillcatchupsep.api.SseEntity;
 import org.seasar.doma.Dao;
 import org.seasar.doma.Insert;
@@ -17,7 +16,7 @@ public interface SseRepository {
     public List<SseEntity> findAll();
 
     @Select
-    public List<SseEntity> deleteAll();
+    public int deleteAll();
 
     @Insert
     @Transactional
