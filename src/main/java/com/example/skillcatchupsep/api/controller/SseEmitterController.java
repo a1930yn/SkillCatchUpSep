@@ -32,9 +32,10 @@ public class SseEmitterController {
                 QZQSMDecoder qzqsmDecoder = new QZQSMDecoder();
 
                 List<SseEntity> SseValues = sseService.findAll();
-                emitter.send("/sse" + " @ " + qzqsmDecoder.decode(SseValues.get(0).getOriginaldata()));
-                sseService.deleteAll();
-
+                if((SseValues.size() !=0 )){
+                    emitter.send("/sse" + " @ " + qzqsmDecoder.decode(SseValues.get(0).getOriginaldata()));
+                    sseService.deleteAll();
+                }
                 // we could send more events
                 emitter.complete();
             } catch (Exception ex) {
